@@ -1,0 +1,28 @@
+[1mdiff --git a/registro_voti.py b/registro_voti.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..55a124e[m
+[1m--- /dev/null[m
+[1m+++ b/registro_voti.py[m
+[36m@@ -0,0 +1,21 @@[m
+[32m+[m[32mclass RegistroVoti:[m
+[32m+[m[32m    def __init__(self):[m
+[32m+[m[32m        self.voti = [][m
+[32m+[m[41m        [m
+[32m+[m[32m    def aggiungi_voto(self, voto):[m
+[32m+[m[32m        if not 0 < voto <= 10:[m
+[32m+[m[32m            raise ValueError("Voto non valido")[m
+[32m+[m[32m        self.voti.append(voto)[m
+[32m+[m[41m        [m
+[32m+[m[32m    def media(self):[m
+[32m+[m[32m        if len(self.voti) == 0:[m
+[32m+[m[32m            raise ValueError("Il registro è vuoto")[m
+[32m+[m[41m        [m
+[32m+[m[32m        return sum(self.voti) / len(self.voti)[m
+[32m+[m[41m    [m
+[32m+[m[32m    def esito(self):[m
+[32m+[m[32m        if media(self) >= 6:[m
+[32m+[m[32m            return "Promosso"[m
+[32m+[m[41m        [m
+[32m+[m[32m        return "Bocciato"[m
+[32m+[m[41m        [m
+\ No newline at end of file[m
